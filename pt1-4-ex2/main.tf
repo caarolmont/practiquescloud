@@ -2,154 +2,162 @@ provider "aws" {
   region = "us-east-1"
 }   
 
-resource "aws_vpc" "zerotwoVPC" {
+#Red, vpc y subnets
+
+resource "aws_vpc" "cm_VPC" {
   region = "us-east-1"
   cidr_block = "10.0.0.0/16"
   tags = {
-    Name = "02-VPC"
+    Name = "cm-VPC-principal"
   }
 }
 
-resource "aws_subnet" "subnetA" {
-  vpc_id = aws_vpc.zerotwoVPC.id
+resource "aws_subnet" "cm_subnetA" {
+  vpc_id = aws_vpc.cm_VPC.id
   cidr_block = "10.0.32.0/25"
   availability_zone = "us-east-1a"
   tags = {
-    Name = "zerotwoSubnetA"
+    Name = "cm-SubnetA"
   }
 }
 
-resource "aws_subnet" "subnetB" {
-  vpc_id = aws_vpc.zerotwoVPC.id
+resource "aws_subnet" "cm_subnetB" {
+  vpc_id = aws_vpc.cm_VPC.id
   cidr_block = "10.0.30.0/23"
   availability_zone = "us-east-1a"
   tags = {
-    Name = "zerotwoSubnetB"
+    Name = "cm-SubnetB"
   }
 }
 
-resource "aws_subnet" "subnetC" {
-  vpc_id = aws_vpc.zerotwoVPC.id
+resource "aws_subnet" "cm_subnetC" {
+  vpc_id = aws_vpc.cm_VPC.id
   cidr_block = "10.0.33.0/28"
   availability_zone = "us-east-1a"
   tags = {
-    Name = "zerotwoSubnetC"
+    Name = "cm-SubnetC"
   }
 }
 
-resource "aws_network_interface" "ifAsubA" {
-  subnet_id = aws_subnet.subnetA.id
+#Instancias en subnet A
+
+resource "aws_network_interface" "cm_nic_a1" {
+  subnet_id = aws_subnet.cm_subnetA.id
   tags = {
-    Name = "Interface A Subnet A"
+    Name = "cm-NIC-A1-SubnetA"
   }
 }
 
-resource "aws_instance" "ecAsubA" {
+resource "aws_instance" "cm_ec2_a1" {
   primary_network_interface {
-    network_interface_id = aws_network_interface.ifAsubA.id
+    network_interface_id = aws_network_interface.cm_nic_a1.id
   }
 
-  ami = "ami-052064a798f08f0d3"
+  ami = "ami-0567589d25e06853e"
   instance_type = "t3.micro"
   tags = {
-    Name = "ecA subnet A"
+    Name = "cm-EC2-A1-SubnetA"
   }
 }
 
-resource "aws_network_interface" "ifBsubA" {
-  subnet_id = aws_subnet.subnetA.id
+resource "aws_network_interface" "cm_nic_a2" {
+  subnet_id = aws_subnet.cm_subnetA.id
   tags = {
-    Name = "Interface B Subnet A"
+    Name = "cm-NIC-A2-SubnetA"
   }
 }
 
-resource "aws_instance" "ecBsubA" {
-  ami = "ami-052064a798f08f0d3"
-  instance_type = "t3.micro"
-
-  primary_network_interface {
-    network_interface_id = aws_network_interface.ifBsubA.id
-  }
-
-  tags = {
-    Name = "ecB subnet A"
-  }
-}
-
-resource "aws_network_interface" "ifAsubB" {
-  subnet_id = aws_subnet.subnetA.id
-  tags = {
-    Name = "Interface A Subnet B"
-  }
-}
-
-resource "aws_instance" "ecAsubB" {
-  primary_network_interface {
-    network_interface_id = aws_network_interface.ifAsubB.id
-  }
-
-  ami = "ami-052064a798f08f0d3"
-  instance_type = "t3.micro"
-  tags = {
-    Name = "ecA subnet B"
-  }
-}
-
-resource "aws_network_interface" "ifBsubB" {
-  subnet_id = aws_subnet.subnetA.id
-  tags = {
-    Name = "Interface B Subnet B"
-  }
-}
-
-resource "aws_instance" "ecBsubB" {
-  ami = "ami-052064a798f08f0d3"
+resource "aws_instance" "cm_ec2_a2" {
+  ami = "ami-0567589d25e06853e"
   instance_type = "t3.micro"
 
   primary_network_interface {
-    network_interface_id = aws_network_interface.ifBsubB.id
+    network_interface_id = aws_network_interface.cm_nic_a2.id
   }
 
   tags = {
-    Name = "ecB subnet B"
+    Name = "cm-EC2-A2-SubnetA"
   }
 }
 
-resource "aws_network_interface" "ifAsubC" {
-  subnet_id = aws_subnet.subnetA.id
+#Instancias en subnet b
+
+resource "aws_network_interface" "cm_nic_b1" {
+  subnet_id = aws_subnet.cm_subnetB.id
   tags = {
-    Name = "Interface A Subnet C"
+    Name = "cm-NIC-B1-SubnetB"
   }
 }
 
-resource "aws_instance" "ecAsubC" {
+resource "aws_instance" "cm_ec2_b1" {
   primary_network_interface {
-    network_interface_id = aws_network_interface.ifAsubC.id
+    network_interface_id = aws_network_interface.cm_nic_b1.id
   }
 
-  ami = "ami-052064a798f08f0d3"
+  ami = "ami-0567589d25e06853e"
   instance_type = "t3.micro"
   tags = {
-    Name = "ecA subnet C"
+    Name = "cm-EC2-B1-SubnetB"
   }
 }
 
-resource "aws_network_interface" "ifBsubC" {
-  subnet_id = aws_subnet.subnetA.id
+resource "aws_network_interface" "cm_nic_b2" {
+  subnet_id = aws_subnet.cm_subnetB.id
   tags = {
-    Name = "Interface B Subnet C"
+    Name = "cm-NIC-B2-SubnetB"
   }
 }
 
-resource "aws_instance" "ecBsubC" {
-  ami = "ami-052064a798f08f0d3"
+resource "aws_instance" "cm_ec2_b2" {
+  ami = "ami-0567589d25e06853e"
   instance_type = "t3.micro"
 
   primary_network_interface {
-    network_interface_id = aws_network_interface.ifBsubC.id
+    network_interface_id = aws_network_interface.cm_nic_b2.id
   }
 
   tags = {
-    Name = "ecB subnet C"
+    Name = "cm-EC2-B2-SubnetB"
+  }
+}
+
+#Instanias en subnet C
+
+resource "aws_network_interface" "cm_nic_c1" {
+  subnet_id = aws_subnet.cm_subnetC.id
+  tags = {
+    Name = "cm-NIC-C1-SubnetC"
+  }
+}
+
+resource "aws_instance" "cm_ec2_c1" {
+  primary_network_interface {
+    network_interface_id = aws_network_interface.cm_nic_c1.id
+  }
+
+  ami = "ami-0567589d25e06853e"
+  instance_type = "t3.micro"
+  tags = {
+    Name = "cm-EC2-C1-SubnetC"
+  }
+}
+
+resource "aws_network_interface" "cm_nic_c2" {
+  subnet_id = aws_subnet.cm_subnetC.id
+  tags = {
+    Name = "cm-NIC-C2-SubnetC"
+  }
+}
+
+resource "aws_instance" "cm_ec2_c2" {
+  ami = "ami-0567589d25e06853e"
+  instance_type = "t3.micro"
+
+  primary_network_interface {
+    network_interface_id = aws_network_interface.cm_nic_c2.id
+  }
+
+  tags = {
+    Name = "cm-EC2-C2-SubnetC"
   }
 }
