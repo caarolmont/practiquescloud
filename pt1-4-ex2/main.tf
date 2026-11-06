@@ -37,7 +37,7 @@ resource "aws_subnet" "cm_subnetC" {
     }
 }
 
-# 2. INSTANCIAS
+# 2. INSTANCIAS (6)
 
 # Subnet A
 resource "aws_instance" "cm_ec2_a1" {
