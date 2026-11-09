@@ -1,0 +1,12 @@
+
+vpc
+![alt text]({B1D6B674-8A6E-457C-A397-98175D9E43DF}.png)
+
+
+instancias
+![alt text]({33938C57-E7C4-4027-B2B3-9270CBA3278C}.png)
+
+subnet
+
+![alt text]({C6219A48-3881-43DE-8A74-2930D0113C43}.png)
+![alt text]({3C8B4096-261C-4D39-A885-1887337AB2DF}.png)
