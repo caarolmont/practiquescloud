@@ -34,5 +34,5 @@ Quan executem **terraform apply** accedim a la consola de AWS per verificar que:
 *   Tenen associat el Security Group que permet el trànsit SSH (port 22).
 
 ## Final: Neteja de recursos
-Per evitar costos innecessaris al compte d'AWS, una vegada realitzades les comprovacions i captures de pantalla, s'ha procedit a destruir tota la infraestructura creada mitjançant l'ordre:**destroy**
+Per evitar costos innecessaris al compte d'AWS, una vegada realitzades les comprovacions i captures de pantalla executem: **destroy**
 
