@@ -13,7 +13,7 @@ Iniciació a l'Infrastructura com a Codi (IaC) utilitzant Terraform per a la cre
 ## Preparació del entorn
 **1. Configuració de CredencialS AWS:** 
 
-![alt text]({0BBE267E-DF97-45BD-8731-4CD2AA8E2718}.png)
+![alt text]({4AF8C75A-76EA-482D-A74E-3DD49F984DA5}.png)
 
 Configurem el AWS CLI amb **aws configure**, introduim el Secret Access Key per permitir que Terraform es comuniqui amb AWS
 (canvia cada dia, llavors cada dia has de tornar a introduir-la)
