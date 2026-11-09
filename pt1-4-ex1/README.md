@@ -16,7 +16,7 @@ Iniciació a l'Infrastructura com a Codi (IaC) utilitzant Terraform per a la cre
 
 ## Topología
 
-![Topología de Red - Exercici 1](assets/topologia.png)
+![Tipologia]({74568CFA-5F43-408C-BDF4-99FF9D4CA087}.png)
 
 ## Després del desplegament verifiquem 
 
