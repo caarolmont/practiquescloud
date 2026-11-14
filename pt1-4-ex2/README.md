@@ -9,13 +9,14 @@ Automatitzar la creació d'una infraestructura de xarxa a AWS utilitzant Terrafo
 *   **Sistema Operatiu:** Amazon Linux 2023
 *   **Quantitat:** 1 VPC, 3 Subxarxes i 6 instàncies EC2.
 
-## Topologia
-## Preparació del entorn
+# TOPOLOGIA
+# PREPARACIÓ DE L'ENTORN
 **1. Configuració de Credencials AWS:** 
 Configurem el AWS CLI amb **aws configure** introduint l'Access Key.
 
 ![alt text](assets/{05D8426E-B4BA-4F91-8B2B-695C72A18E97}.png)
 
+# INSTRUCCIONS D'EXECUCIÓ CODI TERRAFORM 
 
 ## Inicialitzacio del directori
 Un cop tenim els fitchers main.tf creats amb el primer pas es inicialitzar el directori
@@ -33,7 +34,7 @@ Un cop revisat el pla i confirmat que és correcte crearem la infraestructura a 
 
 **terraform apply**
 
-## Verificació en la Consola de AWS
+# VERIFICACIÓ CONSOLA AWS
 Quan executem **terraform apply**, accedim a la consola de AWS per verificar que:
 
 
@@ -50,7 +51,7 @@ VPC
 *   **Instàncies EC2:** Les 6 instàncies estan en estat **Running**
 ![alt text](assets/{33938C57-E7C4-4027-B2B3-9270CBA3278C}.png)
 
-## Final: Neteja de recursos
+# FINAL: Neteja de recursos
 Per evitar costos innecessaris al compte d'AWS, una vegada realitzades les comprovacions i captures de pantalla executem: 
 
 **terraform destroy**
