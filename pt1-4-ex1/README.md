@@ -21,7 +21,8 @@ Configurem el AWS CLI amb **aws configure**, introduim el Secret Access Key per 
 
 ## TOPOLOGIA
 
-![Tipologia](assets/{74568CFA-5F43-408C-BDF4-99FF9D4CA087}.png)
+<img width="697" height="437" alt="image" src="https://github.com/user-attachments/assets/794ab57c-7704-40f7-9221-1ac70d39b38f" />
+
 
 # INSTRUCCIONS D'EXECUCIÓ CODI TERRAFORM 
 
