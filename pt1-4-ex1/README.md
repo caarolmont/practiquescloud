@@ -13,7 +13,8 @@ Iniciació a l'Infrastructura com a Codi (IaC) utilitzant Terraform per a la cre
 # PREPARACIÓ DE L'ENTORN
 **1. Configuració de CredencialS AWS:** 
 
-![alt text](assets/{4AF8C75A-76EA-482D-A74E-3DD49F984DA5}.png)
+<img width="196" height="230" alt="image" src="https://github.com/user-attachments/assets/c2e2ac1e-353c-48d1-a8e6-67a02008e128" />
+
 
 Configurem el AWS CLI amb **aws configure**, introduim el Secret Access Key per permitir que Terraform es comuniqui amb AWS
 (canvia cada dia, llavors cada dia has de tornar a introduir-la)
@@ -45,7 +46,8 @@ Un cop revisat el pla i confirmat que és correcte crearem la infraestructura a 
 Quan executem **terraform apply** accedim a la consola de AWS per verificar que:
 *   Les 2 instàncies estàn **Running**.
 
-![alt text](assets/{67F8A904-9CC1-4F1B-B30B-CAFC74CB6C6C}.png)
+<img width="1045" height="125" alt="image" src="https://github.com/user-attachments/assets/8f884395-b1a7-4e3c-b153-1125ba9019a6" />
+
 
 *   El tipo de instància és **t3.micro** y utilitza la AMI correcte
 *   Tenen associat el Security Group que permet el trànsit SSH (port 22).
