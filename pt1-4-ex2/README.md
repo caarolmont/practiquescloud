@@ -10,6 +10,10 @@ Automatitzar la creació d'una infraestructura de xarxa a AWS utilitzant Terrafo
 *   **Quantitat:** 1 VPC, 3 Subxarxes i 6 instàncies EC2.
 
 # TOPOLOGIA
+
+<img width="1381" height="662" alt="image" src="https://github.com/user-attachments/assets/7916716f-c760-4575-978e-a2b287da3307" />
+
+
 # PREPARACIÓ DE L'ENTORN
 **1. Configuració de Credencials AWS:** 
 Configurem el AWS CLI amb **aws configure** introduint l'Access Key.
