@@ -18,7 +18,7 @@ Automatitzar la creació d'una infraestructura de xarxa a AWS utilitzant Terrafo
 **1. Configuració de Credencials AWS:** 
 Configurem el AWS CLI amb **aws configure** introduint l'Access Key.
 
-![alt text](assets/{05D8426E-B4BA-4F91-8B2B-695C72A18E97}.png)
+<img width="185" height="203" alt="image" src="https://github.com/user-attachments/assets/e365ff80-159a-446c-9a41-83d8ffa4a50a" />
 
 # INSTRUCCIONS D'EXECUCIÓ CODI TERRAFORM 
 
@@ -45,15 +45,18 @@ Quan executem **terraform apply**, accedim a la consola de AWS per verificar que
 *   **VPC i Subxarxes:** La VPC **cm-VPC-principal** està creada amb les 3 subxarxes i els seus CIDR correctes
 VPC
 
-![vpc_subnets](assets/{B1D6B674-8A6E-457C-A397-98175D9E43DF}.png)
+<img width="676" height="38" alt="image" src="https://github.com/user-attachments/assets/488492d6-0393-4ea8-904b-e407259d4765" />
+
 
 **SUBXARXES**
 
-![vpc_subnets](assets/{C6219A48-3881-43DE-8A74-2930D0113C43}.png)
-![vpc_subnets](assets/{3C8B4096-261C-4D39-A885-1887337AB2DF}.png)
+<img width="1420" height="73" alt="image" src="https://github.com/user-attachments/assets/18d2a032-792c-47d3-9c05-34c399044c7c" />
+
+<img width="1297" height="43" alt="image" src="https://github.com/user-attachments/assets/f075572a-bb3d-4d82-9bbe-219c17f1ddea" />
+
 
 *   **Instàncies EC2:** Les 6 instàncies estan en estat **Running**
-![ec2_instances](image.png)
+<img width="700" height="183" alt="image" src="https://github.com/user-attachments/assets/a2b865a9-7336-4dc5-8f8d-c8a1255e8580" />
 
 # FINAL: Neteja de recursos
 Per evitar costos innecessaris al compte d'AWS, una vegada realitzades les comprovacions i captures de pantalla executem: 
