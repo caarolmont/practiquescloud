@@ -45,15 +45,15 @@ Quan executem **terraform apply**, accedim a la consola de AWS per verificar que
 *   **VPC i Subxarxes:** La VPC **cm-VPC-principal** està creada amb les 3 subxarxes i els seus CIDR correctes
 VPC
 
-![alt text](assets/{B1D6B674-8A6E-457C-A397-98175D9E43DF}.png)
+![vpc_subnets](assets/{B1D6B674-8A6E-457C-A397-98175D9E43DF}.png)
 
 **SUBXARXES**
 
-![alt text](assets/{C6219A48-3881-43DE-8A74-2930D0113C43}.png)
-![alt text](assets/{3C8B4096-261C-4D39-A885-1887337AB2DF}.png)
+![vpc_subnets](assets/{C6219A48-3881-43DE-8A74-2930D0113C43}.png)
+![vpc_subnets](assets/{3C8B4096-261C-4D39-A885-1887337AB2DF}.png)
 
 *   **Instàncies EC2:** Les 6 instàncies estan en estat **Running**
-![alt text](assets/{33938C57-E7C4-4027-B2B3-9270CBA3278C}.png)
+![ec2_instances](image.png)
 
 # FINAL: Neteja de recursos
 Per evitar costos innecessaris al compte d'AWS, una vegada realitzades les comprovacions i captures de pantalla executem: 
