@@ -61,8 +61,8 @@ resource "aws_route_table_association" "public_subnetB_assoc" {
 }
 
 #6. Security Group
-resource "aws_security_group" "sg" {
-  name        = "sg-allow-ssh-http"
+resource "aws_security_group" "sg_ssh_icmp_outbound" {
+  name        = "sg_ssh_icmp_outbound"
   description = "Security group per practica pt2.2"
   vpc_id      = aws_vpc.VPC-03.id   
 
@@ -99,7 +99,7 @@ resource "aws_instance" "ec2_a" {
   instance_type = "t3.micro"
   subnet_id     = aws_subnet.public_subnetA.id
   key_name      = "vockey"
-  vpc_security_group_ids = [aws_security_group.allow_ssh_internal_icmp_and_outbound.id]
+  vpc_security_group_ids = [aws_security_group.sg_ssh_icmp_outbound.id]
   tags = {
     Name = "ec2-a"
   }
@@ -111,9 +111,10 @@ resource "aws_instance" "ec2_b" {
   instance_type = "t3.micro"
   subnet_id     = aws_subnet.public_subnetB.id
   key_name      = "vockey"
-  vpc_security_group_ids = [aws_security_group.allow_ssh_internal_icmp_and_outbound.id]
+  vpc_security_group_ids = [aws_security_group.sg_ssh_icmp_outbound.id]
   tags = {
     Name = "ec2-b"
   }
 }
+
 
