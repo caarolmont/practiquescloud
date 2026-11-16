@@ -98,9 +98,10 @@ resource "aws_instance" "ec2_a" {
   ami           = "ami-0567589d25e06853e"
   instance_type = "t3.micro"
   subnet_id     = aws_subnet.public_subnetA.id
-  security_groups = [aws_security_group.sg.name]
+  key_name      = "vockey"
+  vpc_security_group_ids = [aws_security_group.allow_ssh_internal_icmp_and_outbound.id]
   tags = {
-    Name = "EC2-SubnetA"
+    Name = "ec2-a"
   }
 }
 
@@ -109,9 +110,10 @@ resource "aws_instance" "ec2_b" {
   ami           = "ami-0567589d25e06853e"
   instance_type = "t3.micro"
   subnet_id     = aws_subnet.public_subnetB.id
-  security_groups = [aws_security_group.sg.name]
+  key_name      = "vockey"
+  vpc_security_group_ids = [aws_security_group.allow_ssh_internal_icmp_and_outbound.id]
   tags = {
-    Name = "EC2-SubnetB"
+    Name = "ec2-b"
   }
 }
 
